@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.js"
+  },
   "devDependencies": {
     "@types/chrome": "^0.0.313",
     "copy-webpack-plugin": "^13.0.0",
@@ -9,5 +12,12 @@
   },
   "dependencies": {
     "@bsv/sdk": "^1.4.18"
-  }
+  },
+  "name": "bsvhackathon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
