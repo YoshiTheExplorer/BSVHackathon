@@ -12,9 +12,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "@bsv/sdk": "^1.4.18",
-    "npm install --save scrypt-ts": "^0.6.0",
-    "npx scrypt-cli --help": "^0.6.0"
+    "@bsv/sdk": "^1.4.18"
   },
   "name": "bsvhackathon",
   "version": "1.0.0",
