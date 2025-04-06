@@ -9,7 +9,7 @@
        "identity"
     ],
     "action": {
-      
+      "default_popup": "youtubeAuth.html"
     },
     "content_scripts": [
     {
