@@ -14,7 +14,10 @@ function addCustomButtonToChannelNames(): void {
     button.style.cursor = 'pointer';
 
     button.addEventListener('click', (e: MouseEvent) => {
-      //add logic for tipping here
+      //TODO: add logic for tipping here
+      /*
+      
+      */
       e.stopPropagation();
       alert(`Button clicked near channel: ${channelElem.textContent?.trim()}`);
     });
