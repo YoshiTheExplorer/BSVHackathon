@@ -1,13 +1,19 @@
 {
-   "compilerOptions": {
-     "target": "ES6",
-     "module": "ESNext",
-     "outDir": "dist",
-     "strict": true,
-     "esModuleInterop": true,
-     "lib": ["DOM", "ESNext"],   // ✅ Browser + modern JavaScript
-     "moduleResolution": "Bundler"  // Optional: Helps resolve modern modules like Vite/ESBuild
-   },
-   "include": ["src"]
- }
- 
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "moduleResolution": "Bundler",
+    // ✅ Add this line:
+    "skipLibCheck": true
+  },
+  "include": [
+    "src"
+  ]
+}

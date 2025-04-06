@@ -1,3 +1,7 @@
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
 export default defineConfig({
     build: {
         outDir: 'dist',
@@ -6,9 +10,17 @@ export default defineConfig({
                 injectYoutube: resolve(__dirname, 'src/injectYoutube.ts')
             },
             output: {
-                format: 'iife', // <- 👈 bundle all imports into one browser-friendly function
+                format: 'iife', // 🔥 ensures no `import` in built JS
                 entryFileNames: '[name].js'
             }
         }
-    }
+    },
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                { src: 'public/manifest.json', dest: '.' },
+                { src: 'public/youtubeAuth.html', dest: '.' }
+            ]
+        })
+    ]
 })
