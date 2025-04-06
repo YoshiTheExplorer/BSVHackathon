@@ -5,13 +5,11 @@
     "manifest_version": 3,
     "permissions": [
        "activeTab",
-       "scripting"
+       "scripting",
+       "identity"
     ],
     "action": {
-      "default_popup": "login.html",
-      "default_icon": {
-         
-      }
+      
     },
     "content_scripts": [
     {
@@ -20,5 +18,14 @@
       "run_at": "document_idle"
     }
     ],
-    "host_permissions": ["*://www.youtube.com/*"]
+    "host_permissions": ["https://www.googleapis.com/", "*://www.youtube.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwjVXwc/jp8ItheT5i/ZJjlpodMqS0xov3akzmzWG69uGFvWudPRanlqxh1vdTBWL8kGBMgHSJTJX5Gz0xG/nKJVZYGAtc9bqmH42nz8h3lPyb+QgCzCyV7bKbkLTINxn1XofA5vJGc8AukmQTX4Su7uIdkHbhCSdjXHCUGfrtBGWXIDFkRoUuCFUe7L+lVtc5aVDSPJkwT2sZZnmTGgGZZIXx/TdjHf51LFGsFav5HrMmfkQDaKVfiDXh2XOGBOtwzvlBS4D8jb4JFGH2iW4ll/b9bIuyJNUNGnkSMjPeIvRRk9Y4FnxGL9f9WWU6IuKI+EVkg2++xGgDE32/g5QJQIDAQAB",
+    "oauth2": {
+      "client_id": "298266220672-c762v5ei90b22l1t4ajm5bk93ocrhdgg.apps.googleusercontent.com",
+      "scopes":["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/youtube.readonly"]
+     }
+
  }
