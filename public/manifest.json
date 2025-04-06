@@ -3,15 +3,22 @@
     "description": "bsvhackathon extension",
     "version": "1.0",
     "manifest_version": 3,
-    "action": {
-    "default_popup": "login.html"
-    },
     "permissions": [
        "activeTab",
        "scripting"
     ],
-    "background": {
-
+    "action": {
+      "default_popup": "login.html",
+      "default_icon": {
+         
+      }
+    },
+    "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_idle"
     }
-    
+    ],
+    "host_permissions": ["*://www.youtube.com/*"]
  }
